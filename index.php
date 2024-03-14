@@ -4,7 +4,7 @@ require_once 'SWSDK.php';
 use SWServices\Authentication\AuthenticationService as Authentication;
 use SWServices\Stamp\StampService as StampService;
 use SWServices\Stamp\EmisionTimbrado as EmisionTimbrado;
-use SWServices\Validation\ValidarXML as ValidarXML;
+use SWServices\Validation\ValidateXMLService as ValidarXML;
 use SWServices\JSonIssuer\JsonEmisionTimbrado as JsonEmisionTimbrado;
 use SWServices\Cancelation\CancelationService as CancelationService;
 use SWServices\AccountBalance\AccountBalanceService as AccountBalanceService;

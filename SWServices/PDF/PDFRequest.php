@@ -3,7 +3,7 @@ namespace SWServices\PDF;
 
 use Exception;
 
-class PdfRequest
+class PDFRequest
 {
     public static function sendReqGenerate($urlApi, $token, $xml, $logo, $templateId, $extras)
     {

@@ -5,14 +5,14 @@ use SWServices\Services as Services;
 use SWServices\Validation\ValidateRequest as validateRequest;
 use Exception;
 
-class ValidarXML extends Services{
+class ValidateXMLService extends Services{
        
     public function __construct($params) {
         parent::__construct($params);
     }
     
    public static function Set($params){
-        return new ValidarXML($params);
+        return new ValidateXMLService($params);
     }
     
     public static function ValidaXML($xml, $isb64 = false){

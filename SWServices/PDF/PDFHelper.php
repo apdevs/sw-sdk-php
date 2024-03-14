@@ -8,7 +8,7 @@ use Exception;
 /*Clase para las funciones de ayuda
 para los servicios PDF*/
 
-class PdfHelper
+class PDFHelper
 {
     private static $xml = null;
 

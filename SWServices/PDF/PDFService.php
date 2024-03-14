@@ -2,10 +2,10 @@
 namespace SWServices\PDF;
 
 use Exception;
-use SWServices\PDF\PdfHelper as PdfHelper;
+use SWServices\PDF\PDFHelper as PDFHelper;
 use SWServices\Helpers\RequestHelper as HttpRequest;
 use SWServices\Services as Services;
-use SWServices\PDF\PdfRequest as PdfRequest;
+use SWServices\PDF\PDFRequest as PDFRequest;
 use SWServices\Helpers\ResponseHelper as Response;
 
 class PdfService extends Services 
@@ -30,14 +30,14 @@ class PdfService extends Services
      * @param string $templateId Identificador de la plantilla.
      * @param string $extras Datos adicionales al xml.
      * @param string $isB64 Especifica si el XML está en B64.
-     * @return PdfRequest
+     * @return PDFRequest
      */
      public static function GeneratePDF($xml, $logo, $templateId,$extras,$isB64=false){
         $params = array(
             "xml" => $xml
         );  
-        $helper = new PdfHelper($params);
-        $response = PdfRequest::sendReqGenerate(Services::get_urlApi(), Services::get_token(), $helper::getXml($isB64), $logo, $templateId,$extras);
+        $helper = new PDFHelper($params);
+        $response = PDFRequest::sendReqGenerate(Services::get_urlApi(), Services::get_token(), $helper::getXml($isB64), $logo, $templateId,$extras);
         return $response;
     }
 
@@ -53,7 +53,7 @@ class PdfService extends Services
             if(isset($extra)){
                 $extra = json_encode($extra);
             }
-            PdfHelper::validateUuid($uuid);
+            PDFHelper::validateUuid($uuid);
             return HttpRequest::postJson(Services::get_urlApi(),'/pdf/v1/api/RegeneratePdf/'.$uuid, Services::get_token(), $extra, Services::get_proxy());
         } catch (Exception $e) {
             return Response::handleException($e);
