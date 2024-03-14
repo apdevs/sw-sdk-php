@@ -8,7 +8,7 @@ use SWServices\Services as Services;
 use SWServices\PDF\PDFRequest as PDFRequest;
 use SWServices\Helpers\ResponseHelper as Response;
 
-class PdfService extends Services 
+class PDFService extends Services
 {
 
     public function __construct($params) {
@@ -16,11 +16,11 @@ class PdfService extends Services
     }
     /**
      * Inicializa PDF Service.
-     * @return PdfService
+     * @return PDFService
      */
     public static function Set($params){
         
-        return new PdfService($params);
+        return new PDFService($params);
         
     }
     /**

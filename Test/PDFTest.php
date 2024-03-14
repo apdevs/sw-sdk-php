@@ -3,7 +3,7 @@
 namespace tests;
 
 use PHPUnit\Framework\TestCase;
-use SWServices\PDF\PdfService as PdfService;
+use SWServices\PDF\PDFService as PDFService;
 use Exception;
 
 final class PDFTest extends TestCase
@@ -20,7 +20,7 @@ final class PDFTest extends TestCase
             "password" => getenv('SDKTEST_PASSWORD')
         );
         try {
-            $pdfService = PdfService::Set($params);
+            $pdfService = PDFService::Set($params);
             $result = $pdfService::GeneratePDF($xml, $logo, $templateId, null, false);
             $resultSpect = "success";
             $this->assertEquals($resultSpect, $result->status);

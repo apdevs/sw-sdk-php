@@ -2,7 +2,7 @@
     "name": "apdevs/sw-sdk-php",
     "description": "PHP Library for SW Services",
     "type": "library",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "homepage": "https://github.com/apdevs/sw-sdk-php",
     "license": "MIT",
     "authors": [
